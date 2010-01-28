@@ -4,12 +4,12 @@ This module contains a Perl5 class library for parsing the output from
 James Clark's SGMLS and NSGMLS parsers.
 
 Runtime requirements:
-  perl-5.10.0-5
+  perl-5.10.1-2
 
 Build requirements:
-  cygport-0.9.10-1
+  cygport-0.9.80-1
   make-3.81-2
-  perl-5.10.0-5
+  perl-5.10.1-2
 
 Canonical website:
   http://search.cpan.org/~dmegg/SGMLSpm/
@@ -36,6 +36,9 @@ command-line: 'cygcheck -l perl-SGMLSpm'.
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.03ii-2 -----
+Fixed script shebang for perl-5.10.1 and later.
 
 ----- version 1.03ii-1 -----
 Initial release for Cygwin 1.7.
