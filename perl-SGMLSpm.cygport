@@ -3,17 +3,19 @@ inherit perl
 
 NAME="perl-SGMLSpm"
 VERSION=1.03ii
-RELEASE=3
+RELEASE=4
 CATEGORY="Perl"
 SUMMARY="Perl SGMLS parser module"
 DESCRIPTION="This module contains a Perl5 class library for parsing the
 output from James Clark's SGMLS and NSGMLS parsers."
-SRC_URI+=" mirror://portage/dev-perl/SGMLSpm/files/Makefile.PL"
 SRC_DIR="SGMLSpm"
 
-PATCH_URI="mirror://portage/dev-perl/SGMLSpm/files/sgmlspl.patch"
+ARCH=noarch
 
-CYGPORT_USE_UNSTABLE_API=1
-src_patch_hook() {
-	cp -f sgmlspl{.pl,}
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	dodir /usr/bin ${PERL_VENDORLIB}
+	make install_system BINDIR=${D}/usr/bin PERL5DIR=${D}${PERL_VENDORLIB}
 }
