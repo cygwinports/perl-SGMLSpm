@@ -3,7 +3,7 @@ inherit perl
 
 NAME="perl-SGMLSpm"
 VERSION=1.03ii
-RELEASE=4
+RELEASE=5
 CATEGORY="Perl"
 SUMMARY="Perl SGMLS parser module"
 DESCRIPTION="This module contains a Perl5 class library for parsing the
